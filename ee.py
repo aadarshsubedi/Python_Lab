@@ -1,0 +1,45 @@
+import turtle
+import math
+import time
+screen = turtle.Screen()
+screen.bgcolor("black")
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color("#B22B27")
+pen.width(2)
+pen.hideturtle()
+def draw_heart():
+    pen.penup()
+    pen.goto(0, -200)
+    pen.pendown()
+    pen.begin_fill()
+    pen.fillcolor("#B22B27")
+    pen.left(50)
+    pen.forward(133)
+    pen.circle(50, 200)
+    pen.right(140)
+    pen.circle(50, 200)
+    pen.forward(133)
+    pen.end_fill()
+def draw_heart_with_lines():
+    pen.penup()
+    pen.goto(0, 0)
+    pen.pendown()
+    for angle in range(0, 360, 4):  
+        x = 200 * math.sin(math.radians(angle)) ** 3
+        y = 200 * math.cos(math.radians(angle)) - 50 * math.cos(math.radians(angle * 2))
+        pen.penup()
+        pen.goto(0, 0)
+        pen.pendown()
+        pen.goto(x, y)
+        time.sleep(0.05) 
+def write_text():
+    pen.penup()
+    pen.goto(-100, -250)
+    pen.color("#FFD700")
+    pen.write("I love you, babe", font=("Fira Code", 24, "bold"))
+    pen.hideturtle()
+draw_heart()
+draw_heart_with_lines() 
+write_text()
+turtle.done()
