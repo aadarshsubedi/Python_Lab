@@ -3,7 +3,7 @@
 # Find the index of the maximum and minimum values. 
 import numpy as np
 arr=np.random.randint(1,101,15)
-print("Random Value of 15 element",arr)
+print("Random Value of 15 element: ",arr)
 print("The minimum value index :",np.argmin(arr))
 print("The maximum value index :",np.argmax(arr))
 arr=np.sort(arr)

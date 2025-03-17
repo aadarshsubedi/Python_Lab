@@ -2,4 +2,4 @@
 import numpy as np
 arr=np.arange(10,100,10)
 new_arr=arr.reshape(3,3)
-print(new_arr)
+print("3x3 matrix :",new_arr)
